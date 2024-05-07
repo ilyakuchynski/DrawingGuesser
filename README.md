@@ -1,6 +1,7 @@
 # Drawing Guesser
 
-![Untitled video - Made with Clipchamp (3)](https://github.com/ilyakuchynski/DrawingGuesser/assets/63789788/c9b17457-ba27-4ab6-8960-d6910b293bdd)
+![Видео без названия — сделано в Clipchamp (6)](https://github.com/ilyakuchynski/DrawingGuesser/assets/63789788/94ee5ae8-db00-4517-ad67-a217576bd781)
+
 
 ## Team Members:
 - Ilya Kuchynski
