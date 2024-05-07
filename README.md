@@ -5,7 +5,7 @@
 - Heorhii Koval
 
 ## Description:
-DrawingGuesser is an interactive game that puts your drawing skills to the ultimate test. Players must race against the clock to accurately depict a given topic or word on a canvas. The challenge intensifies as an AI opponent rapidly attempts to decipher the drawing and guess the correct word or topic before time runs out.
+DrawingGuesser is an interactive game that puts your drawing skills to the ultimate test. Players must race against the clock to accurately depict a given topic or word on a canvas, while AI should be able to decipher player's drawing.
 ## Framework:
 JavaFX
 
