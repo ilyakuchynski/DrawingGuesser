@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 
+import static com.guessdraw.app.handlers.SceneChanger.initializeStage;
+
 public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -24,6 +26,7 @@ public class Application extends javafx.application.Application {
         stage.setTitle("GuessDraw");
         stage.setScene(scene);
         stage.show();
+        initializeStage(stage);
     }
 
     public static void main(String[] args) {

@@ -7,3 +7,16 @@
     -fx-font-family: 'winkle';
 }
 
+.button{
+    -fx-background-color: #23ad35;
+    -fx-text-fill: white;
+    -fx-font-family: winkle;
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);
+}
+
+.image{
+    url: url('../images/sample.png');
+}
+

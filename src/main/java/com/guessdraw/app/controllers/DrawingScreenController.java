@@ -1,5 +1,6 @@
 package com.guessdraw.app.controllers;
 
+import com.guessdraw.app.handlers.SceneChanger;
 import com.guessdraw.app.handlers.TopicGenerator;
 import javafx.animation.Animation;
 import javafx.animation.Transition;
@@ -52,12 +53,10 @@ public class DrawingScreenController {
     @FXML
     protected void onDrawButtonClick() { // green start button clicked
         DrawButton.styleProperty().set("-fx-background-color: #1d7829; -fx-text-fill: white; -fx-font-family: winkle; -fx-font-size: 17; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);");
-
         // generate a random topic
         currentTopic = TopicGenerator.generateTopic();
         topic_text.setText("Draw " + currentTopic);
         drawingWasGuessed = new AtomicBoolean(false);
-
         // start another thread, responsible for querying gpt about the drawing
         // querying may take a while, so we don't want to block the main thread
         queryThread = new Thread(() -> {
@@ -83,9 +82,15 @@ public class DrawingScreenController {
     protected void onDrawButtonRelease() {
         DrawButton.styleProperty().set("-fx-background-color: #23ad35; -fx-text-fill: white; -fx-font-family: winkle; -fx-font-size: 26; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);");
         removeButton.play();
-        hideCenterText.play();
+        if(center_text.getOpacity() > 0)
+            hideCenterText.play();
         closeHeader.play();
         showTopicText.play();
+    }
+
+    @FXML
+    protected void openMenu(){
+        SceneChanger.changeScene(SceneChanger.SceneType.MENU);
     }
 
     public String currentTopic = "";
@@ -229,6 +234,8 @@ public class DrawingScreenController {
             System.err.println("Failed to save drawing");
         }
     }
+
+
 
 
 }

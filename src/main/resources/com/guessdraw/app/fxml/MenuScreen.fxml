@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="MainBox" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="0.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.guessdraw.app.controllers.MenuScreenController">
+    <children>
+        <Pane fx:id="MainPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fcc203; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0.5, 0.0, 0.0);">
+         <children>
+            <Button fx:id="drawButton" layoutX="259.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#openDrawingScreen" prefHeight="78.0" prefWidth="282.0" style="-fx-background-color: #000080;  -fx-font-size: 29" text="Let's draw!" />
+            <Button fx:id="galleryButton" layoutX="259.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#openGalleryScreen" prefHeight="78.0" prefWidth="282.0" style="-fx-background-color: #000080; -fx-font-size: 29" text="Drawing Gallery" />
+         </children></Pane>
+    </children>
+</VBox>

@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.guessdraw.app.fxml.AllDrawingsScreen"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox fx:id="MainBox" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="0.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.guessdraw.app.controllers.AllDrawingsScreenController">
+    <children>
+        <Pane fx:id="MainPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fcc203; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0.5, 0.0, 0.0);">
+            <children>
+                <Button fx:id="MenuButton" layoutX="648.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#openMenu" prefHeight="36.0" prefWidth="132.0" style="-fx-background-color: #000080" text="Menu" />
+                <ImageView fx:id="drawing1" fitHeight="170.0" fitWidth="170.0" layoutX="39.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/sample.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="drawing2" fitHeight="170.0" fitWidth="170.0" layoutX="315.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sample.png" />
+               </image></ImageView>
+                <ImageView fx:id="drawing3" fitHeight="170.0" fitWidth="170.0" layoutX="592.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sample.png" />
+               </image></ImageView>
+                <ImageView fx:id="drawing4" fitHeight="170.0" fitWidth="170.0" layoutX="39.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sample.png" />
+               </image></ImageView>
+                <ImageView fx:id="drawing5" fitHeight="170.0" fitWidth="176.0" layoutX="315.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sample.png" />
+               </image></ImageView>
+                <ImageView fx:id="drawing6" fitHeight="170.0" fitWidth="170.0" layoutX="592.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sample.png" />
+               </image></ImageView>
+            <Button layoutX="28.0" layoutY="517.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="62.0" text="&lt;" />
+            <Button layoutX="708.0" layoutY="517.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="62.0" text="&gt;" />
+            <Text layoutX="58.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+            <Text layoutX="334.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+            <Text layoutX="611.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+            <Text layoutX="58.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+            <Text layoutX="334.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+            <Text layoutX="611.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+            </children></Pane>
+    </children>
+</VBox>
