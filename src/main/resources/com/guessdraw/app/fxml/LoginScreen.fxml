@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="MainBox" alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" spacing="0.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.guessdraw.app.controllers.LoginController">
+    <children>
+        <Pane fx:id="MainPane" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #fcc203; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0.5, 0.0, 0.0);">
+            <children>
+            <PasswordField fx:id="loginPassword" layoutX="500.0" layoutY="579.0" minHeight="60" prefHeight="60" maxHeight="60" prefWidth="360.0" promptText="password">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></PasswordField>
+            <TextField fx:id="loginUsername" layoutX="500.0" layoutY="500.0" minHeight="60" prefHeight="60" maxHeight="60" prefWidth="360.0" promptText="login">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></TextField>
+            <PasswordField fx:id="registerPassword1" layoutX="1060.0" layoutY="579.0" minHeight="60" prefHeight="60" maxHeight="60" prefWidth="360.0" promptText="password">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></PasswordField>
+            <TextField fx:id="registerUsername" layoutX="1060.0" layoutY="500.0" minHeight="60" prefHeight="60" maxHeight="60" prefWidth="360.0" promptText="login">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></TextField>
+            <PasswordField fx:id="registerPassword2" layoutX="1060.0" layoutY="658.0" minHeight="60" prefHeight="60" maxHeight="60" prefWidth="360.0" promptText="repeat password">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></PasswordField>
+            <Text layoutX="400.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in, so people will know the author of those masterpieces" textAlignment="CENTER" wrappingWidth="1120.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="BigText" />
+               </styleClass></Text>
+            <Text layoutX="500.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="360.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="MediumText" />
+               </styleClass></Text>
+            <Text layoutX="1060.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create new" textAlignment="CENTER" wrappingWidth="360.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="MediumText" />
+               </styleClass></Text>
+
+            <Button layoutX="530.0" layoutY="740.0" mnemonicParsing="false" onMouseClicked="#login" text="Log in">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+                  <String fx:value="MediumButton" />
+                  <String fx:value="GreenButton" />
+               </styleClass></Button>
+            <Button layoutX="1090.0" layoutY="740.0" maxHeight="70" mnemonicParsing="false" onMouseClicked="#register" text="Register">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+                  <String fx:value="BigButton" />
+                  <String fx:value="GreenButton" />
+               </styleClass></Button>
+                <Text fx:id="loggedAs" layoutX="460.0" layoutY="1062.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User: *unlogged*" textAlignment="CENTER" wrappingWidth="1000.0">
+                    <styleClass>
+                        <String fx:value="darkPurpleText" />
+                        <String fx:value="TinyText" />
+                        <String fx:value="Text" />
+                    </styleClass></Text>
+                <Button fx:id="MenuButton" layoutX="1580.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#openMenu" text="Menu">
+                    <styleClass>
+                        <String fx:value="MediumButton" />
+                        <String fx:value="SmallText" />
+                        <String fx:value="Text" />
+                        <String fx:value="BlueButton" />
+                    </styleClass></Button>
+                <Text fx:id="userStatus" layoutX="660.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="600.0">
+                    <styleClass>
+                        <String fx:value="Text" />
+                        <String fx:value="BigText" />
+                        <String fx:value="errorText" />
+                    </styleClass></Text>
+                <Text fx:id="successStatus" opacity="0" text="Successful Login!" layoutX="660.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="600.0">
+                    <styleClass>
+                        <String fx:value="Text" />
+                        <String fx:value="BigText" />
+                        <String fx:value="successText" />
+                    </styleClass></Text>
+            </children></Pane>
+    </children>
+</VBox>

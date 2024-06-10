@@ -3,17 +3,81 @@
     src: url("../fonts/Winkle-Regular.ttf");
 }
 
-.text{
+.Text{
     -fx-font-family: 'winkle';
+    -fx-font-weight: lighter;
 }
 
-.button{
+.HugeButton{
+    -fx-pref-height: 150;
+    -fx-pref-width: 500;
+    -fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+}
+
+.BigButton{
+    -fx-pref-height: 100;
+    -fx-pref-width: 300;
+    -fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+}
+
+.MediumButton{
+    -fx-pref-width: 300;
+    -fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-max-height: 70;
+}
+
+.darkPurpleText{
+    -fx-fill: #4b0082;
+}
+
+.errorText{
+    -fx-fill: #791a1a;
+}
+
+.successText{
+    -fx-fill: #10651b;
+}
+
+.BigText{
+    -fx-font-size: 100;
+}
+
+.MediumText{
+    -fx-font-size: 65;
+}
+
+.SmallText{
+    -fx-font-size: 48;
+}
+
+.TinyText{
+    -fx-font-size: 30;
+}
+
+.GreenButton{
     -fx-background-color: #23ad35;
     -fx-text-fill: white;
-    -fx-font-family: winkle;
-    -fx-font-size: 26;
-    -fx-font-weight: bold;
-    -fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);
+}
+
+.BlueButton{
+    -fx-background-color: #000080;
+    -fx-text-fill: white;
+}
+
+
+.button{
+    /*-fx-background-color: #23ad35;*/
+    /*-fx-text-fill: white;*/
+    /*-fx-font-family: winkle;*/
+    /*-fx-font-size: 26;*/
+    /*-fx-font-weight: bold;*/
+    /*-fx-effect: dropshadow(gaussian, rgba(29, 120, 41, 0.3), 20, 0.5, 0.0, 0.0);*/
 }
 
 .image{

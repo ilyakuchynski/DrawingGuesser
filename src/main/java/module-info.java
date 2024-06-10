@@ -7,6 +7,7 @@ module com.guessdraw.app {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
+    requires java.sql;
 
     opens com.guessdraw.app to javafx.fxml;
     exports com.guessdraw.app;

@@ -1,50 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="MainBox" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="0.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.guessdraw.app.controllers.AllDrawingsScreenController">
+<VBox fx:id="MainBox" alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" spacing="0.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.guessdraw.app.controllers.AllDrawingsScreenController">
     <children>
-        <Pane fx:id="MainPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fcc203; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0.5, 0.0, 0.0);">
+        <Pane fx:id="MainPane" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #fcc203; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0.5, 0.0, 0.0);">
             <children>
-                <Button fx:id="MenuButton" layoutX="648.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#openMenu" prefHeight="36.0" prefWidth="132.0" style="-fx-background-color: #000080" text="Menu" />
-                <ImageView fx:id="drawing1" fitHeight="170.0" fitWidth="170.0" layoutX="39.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/sample.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="drawing2" fitHeight="170.0" fitWidth="170.0" layoutX="315.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/sample.png" />
-               </image></ImageView>
-                <ImageView fx:id="drawing3" fitHeight="170.0" fitWidth="170.0" layoutX="592.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/sample.png" />
-               </image></ImageView>
-                <ImageView fx:id="drawing4" fitHeight="170.0" fitWidth="170.0" layoutX="39.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/sample.png" />
-               </image></ImageView>
-                <ImageView fx:id="drawing5" fitHeight="170.0" fitWidth="176.0" layoutX="315.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/sample.png" />
-               </image></ImageView>
-                <ImageView fx:id="drawing6" fitHeight="170.0" fitWidth="170.0" layoutX="592.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/sample.png" />
-               </image></ImageView>
-            <Button layoutX="28.0" layoutY="517.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="62.0" text="&lt;" />
-            <Button layoutX="708.0" layoutY="517.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="62.0" text="&gt;" />
-            <Text layoutX="58.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
-            <Text layoutX="334.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
-            <Text layoutX="611.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
-            <Text layoutX="58.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
-            <Text layoutX="334.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
-            <Text layoutX="611.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                <Button fx:id="MenuButton" layoutX="1580.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#openMenu" text="Menu">
+                    <styleClass>
+                        <String fx:value="MediumButton" />
+                        <String fx:value="SmallText" />
+                        <String fx:value="Text" />
+                        <String fx:value="BlueButton" />
+                    </styleClass></Button>
+
+                <Button layoutX="45.0" layoutY="925.0" mnemonicParsing="false" onMousePressed="#prevDrawings" maxWidth="120" minWidth="120" minHeight="120" maxHeight="120" text="&lt;">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="MediumText" />
+                  <String fx:value="BigButton" />
+                  <String fx:value="GreenButton" />
+               </styleClass></Button>
+            <Button layoutX="1755.0" layoutY="925.0" mnemonicParsing="false" onMousePressed="#nextDrawings" maxWidth="120" minWidth="120" minHeight="120" maxHeight="120" text="&gt;">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="MediumText" />
+                  <String fx:value="BigButton" />
+                  <String fx:value="GreenButton" />
+               </styleClass></Button>
+            <Rectangle fx:id="clip1" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="270.0" layoutX="160.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" width="433.0" />
+            <Rectangle fx:id="clip2" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="270.0" layoutX="743.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" width="433.0" />
+            <Rectangle fx:id="clip3" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="270.0" layoutX="1326.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" width="433.0" />
+            <Rectangle fx:id="clip4" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="270.0" layoutX="160.0" layoutY="600.0" stroke="BLACK" strokeType="INSIDE" width="433.0" />
+            <Rectangle fx:id="clip5" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="270.0" layoutX="743.0" layoutY="600.0" stroke="BLACK" strokeType="INSIDE" width="433.0" />
+            <Rectangle fx:id="clip6" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="270.0" layoutX="1326.0" layoutY="600.0" stroke="BLACK" strokeType="INSIDE" width="433.0" />
+
+            <Text fx:id="topic1" fill="black" layoutX="160.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+               </styleClass></Text>
+            <Text fx:id="topic2" fill="black" layoutX="743.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+               </styleClass></Text>
+            <Text fx:id="topic3" fill="black" layoutX="1326.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+               </styleClass></Text>
+            <Text fx:id="topic4" fill="black" layoutX="160.0" layoutY="915.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+               </styleClass></Text>
+            <Text fx:id="topic5" fill="black" layoutX="743.0" layoutY="915.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+               </styleClass></Text>
+            <Text fx:id="topic6" fill="black" layoutX="1326.0" layoutY="915.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="SmallText" />
+               </styleClass></Text>
+
+            <Text fx:id="loggedAs" layoutX="460.0" layoutY="1062.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User: *unlogged*" textAlignment="CENTER" wrappingWidth="1000.0">
+                <styleClass>
+                    <String fx:value="darkPurpleText" />
+                    <String fx:value="TinyText" />
+                    <String fx:value="Text" />
+                </styleClass></Text>
+
+            <Text fx:id="author1" layoutX="160.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></Text>
+            <Text fx:id="author2" layoutX="743.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></Text>
+            <Text fx:id="author3" layoutX="1326.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></Text>
+            <Text fx:id="author4" layoutX="160.0" layoutY="950.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></Text>
+            <Text fx:id="author5" layoutX="743.0" layoutY="950.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></Text>
+            <Text fx:id="author6" layoutX="1326.0" layoutY="950.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="433.0">
+               <styleClass>
+                  <String fx:value="Text" />
+                  <String fx:value="TinyText" />
+               </styleClass></Text>
+
             </children></Pane>
     </children>
 </VBox>
