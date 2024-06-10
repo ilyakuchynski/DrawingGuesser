@@ -5,7 +5,6 @@
 
 ## Team Members:
 - Ilya Kuchynski
-- Heorhii Koval
 
 ## Description:
 DrawingGuesser is an interactive game that puts your drawing skills to the ultimate test. Players must race against the clock to accurately depict a given topic or word on a canvas, while AI should be able to decipher player's drawing.
